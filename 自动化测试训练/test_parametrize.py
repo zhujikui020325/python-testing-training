@@ -58,7 +58,7 @@ def test_llm_content():
     assert LLM_RESP["choices"][0]["message"]["content"] == "你好，我是助手"
 
 
-# 4.
+# 4.真接口参数化：参数化 todo_id 为 [1, 2, 3]，GET f"https://jsonplaceholder.typicode.com/todos/{todo_id}"，断言状态码 200 且返回的 id 等于传入的 todo_id。
 @pytest.mark.parametrize(
     "todo_id",
     [1, 2, 3],
